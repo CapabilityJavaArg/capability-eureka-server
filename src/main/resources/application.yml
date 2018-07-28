@@ -1,9 +1,23 @@
 server:
-  port: 8761
-  
+  port: ${PORT:5000}
+security:
+  user:
+    password: ${eureka.password}
+
 eureka:
-  client:
-    register-with-eureka: false
-    fetch-registry: false
+  instance:
+    hostname: localhost
   datacenter: Buenos Aires
   environment: Local
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+  password: ${EUREKA_USER_PASSWORD:password}
+
+info:
+  name: "@project.artifactId@"
+  version: "@project.version@"
+  description: "@project.description@"
+  running-profile: "${spring.profiles.active}"
