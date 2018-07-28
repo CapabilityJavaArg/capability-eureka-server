@@ -6,9 +6,9 @@ security:
 
 eureka:
   instance:
-    hostname: localhost
+    hostname: ${EUREKA_URL}
   datacenter: Buenos Aires
-  environment: Local
+  environment: Master
   client:
     registerWithEureka: false
     fetchRegistry: false
