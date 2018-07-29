@@ -1,22 +1,4 @@
-server:
-  port: ${PORT:5000}
-security:
-  user:
-    password: ${eureka.password}
-
-eureka:
-  instance:
-    hostname: ${EUREKA_URL}
-  datacenter: Buenos Aires
-  environment: Master
-  client:
-    registerWithEureka: false
-    fetchRegistry: false
-    serviceUrl:
-      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
-  password: ${EUREKA_USER_PASSWORD:password}
-
-info:
+info: 
   name: "@project.artifactId@"
   version: "@project.version@"
   description: "@project.description@"

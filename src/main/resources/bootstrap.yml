@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: capability-eureka-server
+  profiles:
+    active:
+    - master
+  cloud:
+    config:
+      uri:
+      - ${CONFIG_SERVER_URL}

@@ -5,7 +5,7 @@
 
 	<groupId>com.accenture.javacapability</groupId>
 	<artifactId>capability-eureka-server</artifactId>
-	<version>0.0.2</version>
+	<version>0.0.3</version>
 	<packaging>jar</packaging>
 
 	<name>capability-eureka-server</name>
